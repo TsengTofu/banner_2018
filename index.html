@@ -1,44 +1,285 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <link rel="stylesheet" href="">
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=0"> -->
+    <meta name="viewport" content="width=1250, user-scalable=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="SAMSUNG平板">
+    <meta name="description" content="Samsung Tab Series，滿足各種需求，化身你的小秘書，是你最佳的好夥伴！">
+    <meta property="og:title" content="《Samsung》Galaxy Tab 系列平板隨時精彩-Mobile01特輯" />
+    <meta property="og:image" content="http://www.mobile01.com/campaign/Samsung_tab/img/fb.jpg" />
+    <title>《Samsung》Galaxy Tab 系列平板隨時精彩-Mobile01特輯</title>
+    <link rel="icon" href="img/logo.ico" />
+    <link rel="stylesheet" href="css/jpreloader.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jpreloader.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/gotop.js"></script>
+    
+    <script type="text/javascript">
+    $(function() {
+        // 預設顯示第一個 Tab
+        var _showTab = 0;
+        var $defaultLi = $('ul.tabs li').eq(_showTab).addClass('active');
+        $('.tab_content').eq($defaultLi.index()).siblings().hide();
 
+        // 當 li 頁籤被點擊時...
+        // 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+        $('ul.tabs li').mouseover(function() {
+            // 找出 li 中的超連結 href(#id)
+            var $this = $(this),
+                _index = $this.index();
+            // 把目前點擊到的 li 頁籤加上 .active
+            // 並把兄弟元素中有 .active 的都移除 class
+            $this.addClass('active').siblings('.active').removeClass('active');
+            // 淡入相對應的內容並隱藏兄弟元素
+            $('.tab_content').eq(_index).stop(false, true).fadeIn().siblings().hide();
+
+            return false;
+        }).find('a').focus(function() {
+            this.blur();
+        });
+    });
+    </script>
+</head>
+  <script language="JavaScript" type="text/javascript">
+// -- AD counter
+function addListener(element, event, listener, bubble) {
+	if(element.addEventListener) {
+		if(typeof(bubble) == "undefined") bubble = false;
+		element.addEventListener(event, listener, bubble);
+	} else if(this.attachEvent) {
+		element.attachEvent("on" + event, listener);
+	}
+}
+
+function HttpRequest(id) {
+	var url = '/promo_counter.php?id=' + id;
+	var http_request = false;
+	
+	if (window.XMLHttpRequest) {
+		http_request = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+		try {
+			http_request = new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e) {
+        	try {
+				http_request = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e) {}
+		}
+	}
+
+	if (http_request) {
+		http_request.onreadystatechange = function() { 
+			if (http_request.readyState == 4) {
+				if (http_request.status == 200) {
+					result = http_request.responseText;
+				}
+			}
+		};   
+		http_request.open('GET', url, true);
+		http_request.send(null);
+	} else {
+		return false;
+	}
+}
+
+var ad_id = 70465;
+
+addListener(this, "load", function() {HttpRequest(ad_id);});
+addListener(window, "load", function() {HttpRequest(ad_id);});
+addListener(document, "load", function() {HttpRequest(ad_id);});
+addListener(document, "DOMContentLoaded", function() {HttpRequest(ad_id);});
+
+document.onload = function() {HttpRequest(ad_id);}
+window.onload = function() {HttpRequest(ad_id);}
+this.onload = function() {HttpRequest(ad_id);}
+  </script>
 <body>
-    <div>
-        <iframe src="2/300x250.html" frameborder="0" width="300" height="250" scrolling="no"></iframe>
-        <iframe src="FINAL/300x250.html" frameborder="0" width="300" height="250" scrolling="no"></iframe>
-        <iframe src="300x250/300x250.html" frameborder="0" width="300" height="250" scrolling="no"></iframe>
-        <iframe src="300x250_1/300x250.html" frameborder="0" width="300" height="250" scrolling="no"></iframe>
-        <iframe src="300x250_4/300x250.html" frameborder="0" width="300" height="250" scrolling="no"></iframe>
-        <iframe src="300x250_5/300x250.html" frameborder="0" width="300" height="250" scrolling="no"></iframe>        
-        <iframe src="ani/728x90.html" frameborder="0" width="728" height="90" scrolling="no"></iframe>
-        <iframe src="300x100/300x100.swf.html" frameborder="0" width="300" height="100" scrolling="no"></iframe>
-        <img src="06.jpg"><br>
-        <img src="01.gif">
-        <img src="02.jpg">
-        <img src="03.jpg">
-        <img src="04.jpg">
-        <img src="05.jpg"><br>        
-        <img src="08.jpg">
-        <img src="09.jpg"><br>
-        <img src="10.jpg">
-        <img src="11.jpg">
-        <img src="12.jpg">
-        <img src="13.jpg">
-        <img src="14.jpg">
-        <img src="15.jpg">
-        <img src="16.jpg">
-        <img src="17.jpg"><br>
-        <img src="18.jpg">
-        <img src="19.jpg">
-        <img src="20.jpg">
-        <img src="21.jpg">    
+    <div id="jSplash"></div>
+    <div class="main">
+        <div class="top" id="goTop">
+            <a href="#"><img src="img/top_button.png" alt=""></a>
+        </div>    
+        <div class="header">
+            <ul>
+                <li class="samsung">
+                    <a href="http://www.mobile01.com/adredir.php?id=70412" target="_blank"></a>
+                </li>
+                <li class="mb01">
+                    <a href="https://www.mobile01.com/index.php" target="_blank"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="part1_all">
+                <div class="part1_title"></div>
+                <div class="menu">
+                    <div class="abgne_tab">
+                        <div class="tab_container">
+                            <div id="tab1" class="tab_content">
+                                <img src="img/A.png" alt="">
+                                <!--<img src="images/A1.png" alt="">-->
+                            </div>
+                            <div id="tab2" class="tab_content">
+                                <img src="img/S.png" alt="">
+                                <!--<img src="images/S1.png" alt="">-->
+                            </div>
+                            <div id="tab3" class="tab_content">
+                                <img src="img/J.png" alt="">
+                                <!--<img src="images/J1.png" alt="">-->
+                            </div>
+                            <div id="tab4" class="tab_content">
+                                <img src="img/E.png" alt="">
+                                <!--<img src="images/J1.png" alt="">-->
+                            </div>
+                        </div>
+                        <ul class="tabs">
+                            <li class="tab_a">
+                                <a href="javascript:"></a>
+                                <div class="tab-line"><img src="img/A1.png" alt=""></div>
+                            </li>
+                            <li class="tab_s">
+                                <div class="tab-line"><img src="img/S1.png" alt=""></div>
+                                <a href="javascript:"></a>
+                            </li>
+                            <li class="tab_j">
+                                <div class="tab-line"><img src="img/J1.png" alt=""></div>
+                                <a href="javascript:"></a>
+                            </li>
+                            <li class="tab_e">
+                                <div class="tab-line"><img src="img/E1.png" alt=""></div>
+                                <a href="javascript:"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="kv">
+                    <a href="http://www.mobile01.com/adredir.php?id=70413" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 編輯文章 -->
+        <div class="part2">
+            <div class="edit">
+                <!-- Banner -->
+                <div class="banner">
+                    <a href="http://www.mobile01.com/adredir.php?id=70414" target="_blank"></a>
+                </div>
+                <div class="edit_content">
+                    <div class="edit_title"></div>
+                    <ul class="article">
+                        <li>
+                            <a href="http://www.mobile01.com/adredir.php?id=70415" target="_blank">
+                                <img src="img/01.png" alt="">
+                                <div class="detail">
+                                    <p>4.3比例+S Pen入門平板Samsung Galaxy Tab A 8.0與9.7 <i class="fa fa-chevron-circle-right" aria-hidden="true" fa-5x></i><!-- <img class="arrow" src="img/arrow.png" alt=""> -->
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.mobile01.com/adredir.php?id=70416" target="_blank">
+                                <img src="img/02.png" alt="">
+                                <div class="detail">
+                                    <p>5.6mm世界最薄Samsung Galaxy Tab S2 9.7 <i class="fa fa-chevron-circle-right" aria-hidden="true" fa-5x></i><!-- <img class="arrow" src="img/arrow.png" alt=""> --></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.mobile01.com/adredir.php?id=70417" target="_blank">
+                                <img src="img/03.png" alt="">
+                                <div class="detail">
+                                    <p>極致輕薄Samsung GALAXY Tab S 10.5 <i class="fa fa-chevron-circle-right" aria-hidden="true" fa-5x></i></p>
+                                    <!-- <img class="arrow" src="img/arrow.png" alt=""> -->
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.mobile01.com/adredir.php?id=70421" target="_blank">
+                                <img src="img/04.png" alt="">
+                                <div class="detail">
+                                    <p>三星推有S Pen的10吋平板 具有PDF註記、懸浮翻譯功能
+                                    <i class="fa fa-chevron-circle-right" aria-hidden="true" fa-5x></i><!-- <img class="arrow" src="img/arrow.png" alt=""> --></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 精選文章 -->
+        <div class="part3">
+            <div class="select">
+                <div class="select_content">
+                    <div class="select_title"></div>
+                    <ul class="part3_article">
+                    	<li>
+                            <a href="http://www.mobile01.com/adredir.php?id=70571" target="_blank">
+                                <img src="img/part3_00.png" alt="">
+                                <div class="part3_detail">
+                                    <p>2017平板大解析！幫你找出最合拍的Mr.Right！<!-- <img class="arrow" src="img/arrow.png" alt=""> --><i class="fa fa-chevron-circle-right" aria-hidden="true" fa-5x></i></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.mobile01.com/adredir.php?id=70418" target="_blank">
+                                <img src="img/part3_01.png" alt="">
+                                <div class="part3_detail">
+                                    <p>Galaxy Tab A老少皆宜，讓你新的一年筆筆皆精彩！<!-- <img class="arrow" src="img/arrow.png" alt=""> --><i class="fa fa-chevron-circle-right" aria-hidden="true" fa-5x></i></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.mobile01.com/adredir.php?id=70419" target="_blanks" title="版權為「香港的fatpig06用戶」所有">
+                                <img src="img/part3_02.png">
+                                <div class="part3_detail">
+                                    <p>越級挑戰，Samsung Galaxy Tab A 2016 with S Pen(附開箱文) Vs Wacom Companion <!-- <img class="arrow" src="img/arrow.png" alt=""> --><i class="fa fa-chevron-circle-right" aria-hidden="true" fa-5x></i></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mobile01.com/topicdetail.php?f=605&t=4551755" target="_blank">
+                                <img src="img/part3_03.png">
+                                <div class="part3_detail">
+                                    <p>Sumsung GALAXY TAB S2 8.0 LTE版 實用心得(開箱) <!-- <img class="arrow" src="img/arrow.png" alt=""> --><i class="fa fa-chevron-circle-right" aria-hidden="true" fa-5x></i></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/part3_coming.png" alt="">
+                                <!-- <div class="part3_detail">
+                                    <p>Galaxy Tab A老少皆宜，讓你新的一年筆筆皆精彩！<img class="arrow" src="img/arrow.png" alt=""></p>
+                                </div> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/part3_coming.png" alt="">
+                                <!-- <div class="part3_detail">
+                                    <p>Galaxy Tab A老少皆宜，讓你新的一年筆筆皆精彩！<img class="arrow" src="img/arrow.png" alt=""></p>
+                                </div> -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
     </div>
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('body').jpreLoader();
+    });
+    </script>
 </body>
 
 </html>

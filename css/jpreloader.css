@@ -1,0 +1,49 @@
+/*這邊的CSS都是可以自己控制的*/
+
+body {
+    display: none;
+}
+
+#jSplash {
+    width: 173px;
+    height: 27px;
+    margin: 0 auto;
+    background: url("../img/samsung_logo.png") no-repeat;
+}
+
+#jpreOverlay {
+    width: 100% height: 100%;
+    background: #004995;
+}
+
+#jpreSlide {
+    font-size: 15px;
+    font-weight: bold;
+    color: #004995;
+    text-align: center;
+    /*font-family: Georgia;*/
+    width: 100%;
+    margin: auto;
+}
+
+
+/*這個是顯示百分比的長條*/
+
+#jpreLoader {
+    width: 100%;
+    height: 5px;
+}
+
+#jpreBar {
+    margin-top: -18%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#41feef+0,ad5ad2+52,feb4ff+100 */
+    background: #fff;
+    /* Old browsers */
+}
+
+#jprePercentage {
+    color: #004995;
+    font-family: Arial;
+    font-size: 28px;
+    font-weight: bold;
+}
