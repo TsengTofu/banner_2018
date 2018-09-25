@@ -1,0 +1,653 @@
+/*-- reset css --*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+
+/* remember to define focus styles! */
+
+:focus {
+    outline: 0;
+}
+
+
+/* remember to highlight inserts somehow! */
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+
+/* tables still need 'cellspacing="0"' in the markup */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+li {
+    list-style: none;
+}
+
+
+/*-- reset css --*/
+
+
+/*-- main css --*/
+
+body{
+    display: block;
+    background: #b7c1cb;
+}
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    background-color: #004995;
+    width: 100%;
+    height: 83px;
+}
+
+.header ul {
+    display: block;
+    max-width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+    padding-bottom: 21.5px;
+    padding-top: 21.5px;
+}
+
+/*.header ul:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+}*/
+
+.header:after {
+    content: "";
+    display: block;
+    clear: both;
+    /*-- 解決float造成的問題 --*/
+}
+
+
+.samsung a {
+    float: left;
+    background: url("../img/samsung_logo.png");
+    width: 173px;
+    height: 27px;
+    margin-top: 6.5px;
+}
+
+.mb01 a {
+    float: right;
+    background: url("../img/mb01_logo.png");
+    width: 183px;
+    height: 40px;
+}
+
+.samsung a:hover, .mb01 a:hover {
+    opacity: 0.8;
+} 
+
+.main {
+    display: block;
+    width: 100%;
+    height: auto;
+    /*min-width: 1920px;*/
+    position: relative;
+    margin:0 auto; 
+}
+
+.main_content {
+    background: url("../img/kv_bg.png") no-repeat center center;
+    display: block;
+    margin:0 auto; 
+    width: 100%;
+    height: 901px;
+    overflow: hidden;
+}
+
+.part1_all {
+    display: block;
+    max-width: 1200px;
+    height: auto;
+    margin: 50px auto;
+    position: relative;
+}
+
+.part1_title {
+    display: block;
+    background: url("../img/tabzone_title.png") no-repeat;
+    width: 286px;
+    height: 100px;
+}
+
+.menu {
+    display: inline-block;
+    width: 645px;
+    height: 755px;
+    float: left;
+}
+
+.kv a{
+    display: inline-block;
+    background: url("../img/kv_man.png");
+    width: 770px; /*64%*/
+    height: 888px;
+    float: right;
+    z-index: 99;
+    position: absolute;
+    right: -192px;
+    top: 0px;
+}
+
+
+
+
+
+
+.part2{
+    display: block;
+    width: 100%;
+    height: 820px;
+    background: url("../img/part2_bg.png") no-repeat center center;
+    position: absolute;
+    z-index: 100;
+    top: 912px;
+    margin: 0 auto;
+}
+
+.edit {
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 820px;
+    
+}
+
+
+.part3{
+    display: block;
+    width: 100%;
+    height: 844px;
+    background: url("../img/part3_bg.png") no-repeat center center;
+    position: absolute;
+    z-index: 100;
+    top: 1730px;
+    margin: 0 auto;
+
+}
+
+.select {
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 844px;
+    
+}
+
+.banner a {
+    display: block;
+    max-width: 1200px;
+    height: 120px;
+    background: url("../img/banner_1200x120.gif") no-repeat center center;
+    margin: 120px auto 50px auto;
+    position: relative;
+}
+
+.edit_title {
+    display: block;
+    background: url("../img/edit_title.png") no-repeat;
+    width: 303px;
+    height: 90px;
+}
+
+.edit_content, .select_content{
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.article {
+    display: block;
+    max-width: 1200px;
+    height:530px; 
+    margin-top: 50px;
+}
+
+
+.article li a:link {
+    position: relative;
+    font-family: "微軟正黑體";
+    font-size: 22px;
+    font-weight: bold; 
+    color: #005687;
+    line-height: 26px;
+}
+
+.article li a:visited{
+    color: #005687;
+}
+
+
+.article li a {
+    display: inline-block;
+    float: left;
+    border-radius: 18px;
+    width: 265px;
+    height: 326px;
+    margin-left: 46px;
+    box-shadow: 2px 2px 5px #000;
+}
+
+.article li:first-child  a:first-child{    
+    margin-left: 0px;
+}
+
+
+.detail {
+    display: block;
+    width: 265px;
+    height: 107px;
+    background: url("../img/cover.png") no-repeat;
+    position: absolute;
+    top: 219px;
+}
+
+
+.detail p{
+    display: block;
+    width: 230px;
+    margin:15px auto 0px auto;
+    text-align: justify;　/*　Firefox到此即可對齊　*/
+    text-justify: auto;　/*　IE需再加上此行　*/
+
+}
+
+.article li a:hover::after {
+    content: url("../img/hover.png");
+    z-index: 99;
+    width: 366px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+
+
+.part2 a img,
+.part3 a img{
+    filter: grayscale(70%);
+    -webkit-filter: grayscale(70%);
+    -moz-filter: grayscale(70%);
+    -ms-filter: grayscale(70%);
+    -o-filter: grayscale(70%);
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    filter: none \9;
+}
+
+.part2 a:hover img,
+.part3 a:hover img {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    filter: none \9;
+}
+
+
+
+/**/
+.part3_article {
+    display: block;
+    max-width: 1200px;
+    height:625px; 
+    margin-top: 50px;
+}
+
+.part3_article li a {
+    display: inline-block;
+    float: left;
+    border-radius: 18px;
+    width: 368px;
+    height: 290px;
+    margin-left: 48px;
+    margin-bottom: 43px; 
+    box-shadow: 2px 2px 5px #000;
+}
+
+
+.part3_article li:first-child  a:first-child{    
+    margin-left: 0px;
+}
+
+
+
+
+
+.part3_article li:nth-child(4) a{
+    margin-left: 0px;
+}
+
+.part3_article li:first-child + li + li + li >a{
+    margin-left: 0px;
+    /*This is work for IE8*/
+}
+
+
+.part3_article li a:link {
+    position: relative;
+    font-family: "微軟正黑體";
+    font-size: 22px;
+    font-weight: bold; 
+    color: #005687;
+    line-height: 26px;
+}
+
+.part3_article li a:visited{
+    color: #005687;
+}
+
+
+.part3_detail {
+    display: block;
+    width: 368px;
+    height: 103px;
+    background: url("../img/cover_part3.png") no-repeat;
+    position: absolute;
+    top: 187px;
+}
+
+
+.part3_detail p{
+    display: block;
+    width: 335px;
+    margin:15px auto 0px auto;
+    text-align: justify;　/*　Firefox到此即可對齊　*/
+    text-justify: auto;　/*　IE需再加上此行　*/
+
+}
+
+.part3_article li a:hover::after {
+    content: url("../img/hover_part3.png");
+    z-index: 99;
+    width: 366px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+
+
+/**/
+
+
+.select_title{
+    background: url("../img/select_title.png") no-repeat;
+    width:304px;
+    height: 90px;
+}
+
+---------------------- 
+.abgne_tab {
+    display: block;
+    clear: left;
+    width: 645px;
+    height: auto; /*多加的*/
+}
+
+.tab_a>a {
+    display: block;
+    float: left;
+    width: 153px;
+    height: 226px;
+    background: url("../img/A2.png") no-repeat center;
+}
+
+.tab_a>a:hover {
+    background: url("../img/A3.png") no-repeat center;
+}
+
+.tab_s>a {
+    display: block;
+    float: left;
+    width: 154px;
+    height: 226px;
+    background: url("../img/S2.png") no-repeat center;
+}
+
+.tab_s>a:hover {
+    background: url("../img/S3.png") no-repeat center;
+}
+
+.tab_j>a {
+    display: block;
+    float: left;
+    width: 152px;
+    height: 226px;
+    background: url("../img/J2.png") no-repeat center;
+}
+
+.tab_j>a:hover {
+    background: url("../img/J3.png") no-repeat center;
+}
+
+.tab_e>a {
+    display: block;
+    float: left;
+    width: 155px;
+    height: 226px;
+    background: url("../img/E2.png") no-repeat center;
+}
+
+.tab_e>a:hover {
+    background: url("../img/E3.png") no-repeat center;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* 20170217 Gabby  ↓*/
+
+ul.tabs {
+    width: 100%;
+    height: 204px;
+    position: relative;
+}
+
+ul.tabs li {
+    float: left;
+    height: 204px;
+    line-height: 20px;
+    margin-top: 14px;
+    /*overflow: hidden;
+    position: relative; 
+    margin-bottom: -1px;
+    /* 讓 li 往下移來遮住 ul 的部份 border-bottom */
+}
+
+.tab-line {
+    position: absolute;
+    top: -450px;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+
+.active .tab-line {
+    display: block;
+    position: absolute;
+    top: -450px;
+    left: 0;
+    width: 614px;
+    height: 453px;
+}
+
+
+/* 20170217 Gabby ↑*/
+
+div.tab_container {
+    width: 614px;
+    height: 453px;
+    position: relative;
+}
+
+.tab_content {
+    position: absolute;
+    top: 34px;
+    z-index: 50;
+}
+
+.tab_container {
+    margin: 0 0 30px;
+}
+
+------------------------
+/*-- main css --*/
+
+
+.part3:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+.top {
+    display: block;
+    width: 100px;
+    height: 100px;
+    z-index: 150;
+    position: absolute;
+    top: 2395px;
+    right: 234px;
+    
+}
+
+@media screen and (min-width: 320px) and (max-width: 1400px) {
+  .top{
+  	display: none;
+  }
+}
