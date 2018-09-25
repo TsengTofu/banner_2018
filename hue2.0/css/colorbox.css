@@ -1,0 +1,139 @@
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+
+#colorbox,
+#cboxOverlay,
+#cboxWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+#cboxWrapper {
+    max-width: none;
+}
+
+#cboxOverlay {
+    /*-- 覆蓋的那層黑底 --*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#cboxContent {
+    position: relative;
+}
+
+#cboxLoadedContent {
+    display: block;
+}
+
+#cboxTitle {
+    margin: 0;
+}
+
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#cboxClose{
+    cursor: pointer;
+}
+
+.cboxPhoto {
+    border: 0;
+    display: block;
+    max-width: 976px;
+    -ms-interpolation-mode: bicubic;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+#colorbox,
+#cboxContent,
+#cboxLoadedContent {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}
+
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+
+#cboxOverlay {
+    background: #000;
+    opacity: 0.6;
+    filter: alpha(opacity=40);
+}
+
+#colorbox {
+    outline: 0;
+}
+
+#cboxContent {
+    background: #000;
+}
+
+#cboxLoadedContent {
+    background: url("../img/popup_bg.png");
+    width: 1136px;
+    height: 690px;
+}
+
+#cboxCurrent {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    color: #ccc;
+}
+
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+
+#cboxClose {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    background: none;
+}
+
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+
+#cboxClose:active {
+    outline: 0;
+}
+
+#cboxClose {
+    position: absolute;
+    top: 54px;
+    right: 8px;
+    display: block;
+    background: url(../img/X.png) no-repeat top center;
+    width: 63px;
+    height: 63px;
+    text-indent: -9999px;
+}
+
+#cboxClose:hover {
+    background-position: bottom center;
+}
+
